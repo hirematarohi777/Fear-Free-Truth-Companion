@@ -1,0 +1,99 @@
+version: '3.8'
+
+services:
+  mongodb:
+    image: mongo:7.0
+    restart: unless-stopped
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - companion-network
+    # Port not publicly published to host in production; accessible inside Docker network
+
+  ollama:
+    image: ollama/ollama:latest
+    restart: unless-stopped
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - companion-network
+    # Port not publicly published; accessible to backend and worker only
+
+  backend:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_ENV=production
+      - APP_BASE_URL=http://localhost:3000
+      - MONGODB_URI=mongodb://mongodb:27017
+      - MONGODB_DATABASE=fear_free_companion
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - OLLAMA_MODEL=qwen2.5:7b
+      - UPLOAD_DIRECTORY=/data/uploads
+      - COOKIE_SECURE=false # Set to true when serving behind HTTPS reverse proxy
+      - CSRF_SECRET=a-very-strong-secret-key-that-is-at-least-32-characters-long
+      - SMTP_HOST=mailpit
+      - SMTP_PORT=1025
+    volumes:
+      - upload_data:/data/uploads
+    depends_on:
+      - mongodb
+      - ollama
+    networks:
+      - companion-network
+
+  worker:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    command: ["python", "app/workers/run_worker.py"]
+    environment:
+      - APP_ENV=production
+      - MONGODB_URI=mongodb://mongodb:27017
+      - MONGODB_DATABASE=fear_free_companion
+      - OLLAMA_BASE_URL=http://ollama:11434
+      - OLLAMA_MODEL=qwen2.5:7b
+      - UPLOAD_DIRECTORY=/data/uploads
+    volumes:
+      - upload_data:/data/uploads
+    depends_on:
+      - mongodb
+      - ollama
+    networks:
+      - companion-network
+
+  frontend:
+    build:
+      context: ../frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - BACKEND_INTERNAL_URL=http://backend:8000
+    depends_on:
+      - backend
+    networks:
+      - companion-network
+
+  mailpit:
+    image: axllent/mailpit:latest
+    restart: unless-stopped
+    ports:
+      - "8025:8025" # Web UI for reviewing test invitation emails
+    networks:
+      - companion-network
+
+networks:
+  companion-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
+  ollama_data:
+  upload_data:

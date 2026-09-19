@@ -1,0 +1,6 @@
+C:\Users\rohi2\Downloads\financesbengalure\fear-free-companion\backend\app\api\v1\reports.py:132: FastAPIDeprecationWarning: `regex` has been deprecated, please use `pattern` instead
+  format: str = Query(default="pdf", regex="^(pdf|json)$"),
+INFO:     Started server process [36776]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)

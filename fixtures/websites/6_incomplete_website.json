@@ -1,0 +1,11 @@
+{
+  "url": "https://urban-fintech-cooperative.test",
+  "page_title": "Urban Fintech Cooperative Services",
+  "page_text": "Urban Fintech Cooperative offers community mortgage solutions at standard rates. We act as an aggregator connecting borrowers with lending partners. Contact our representative for details. Privacy policy and grievance officer details under review.",
+  "claimed_entity": null,
+  "intended_outcome": "Some concerns require verification",
+  "expected_flags": [
+    "Grievance Redressal & Privacy Disclosure - CONCERN (Missing nodal contact)",
+    "Official Regulatory & Domain Registry Verification - INCONCLUSIVE (No recognized SCB/HFC)"
+  ]
+}

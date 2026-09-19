@@ -1,0 +1,14 @@
+{
+  "url": "http://fast-instant-sanction-now.test/apply",
+  "page_title": "Instant 100% Guaranteed Loan - No CIBIL Required",
+  "page_text": "Welcome to Fast Sanction! Guaranteed 100% loan approval within 5 minutes without any credit check or CIBIL score! Please pay processing fee in advance before disbursement of Rs. 4,999 to our executive account. Enter your netbanking password to verify KYC.",
+  "claimed_entity": "State Bank of India",
+  "intended_outcome": "Significant risk indicators found",
+  "expected_flags": [
+    "Transport Layer Security (HTTPS) - CONCERN (uses HTTP)",
+    "Unrealistic Financial & Approval Claims - CONCERN (100% guarantee)",
+    "Advance Fee Payment Requirement - CONCERN (pay in advance)",
+    "Sensitive Credential Solicitation - CONCERN (netbanking password)",
+    "Official Regulatory & Domain Registry Verification - CONCERN (Claims SBI but uses .test domain)"
+  ]
+}

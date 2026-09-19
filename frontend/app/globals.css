@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 40% 98%; /* Soft slate background #f8fafc */
+  --foreground: 222 47% 11%; /* Slate 900 */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --border: 214 32% 91%;
+  --input: 214 32% 91%;
+  --ring: 173 80% 32%;
+}
+
+body {
+  color: hsl(var(--foreground));
+  background-color: hsl(var(--background));
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Accessible focus styling */
+*:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 2px;
+}
+
+/* Monochrome product theme. Existing semantic Tailwind classes keep their meaning. */
+[class*="bg-teal-600"],
+[class*="bg-teal-700"],
+[class*="bg-teal-800"],
+[class*="bg-teal-900"],
+[class*="bg-emerald-600"],
+[class*="bg-emerald-700"] {
+  background-color: #111111 !important;
+}
+
+[class*="bg-teal-50"],
+[class*="bg-teal-100"],
+[class*="bg-teal-200"],
+[class*="bg-emerald-50"],
+[class*="bg-emerald-100"],
+[class*="bg-slate-50"],
+[class*="bg-slate-100"] {
+  background-color: #f5f5f5 !important;
+}
+
+[class*="bg-white"] {
+  background-color: #ffffff !important;
+}
+
+[class*="from-teal-"],
+[class*="via-teal-"],
+[class*="to-teal-"] {
+  background-image: none !important;
+  background-color: #111111 !important;
+}
+
+[class*="text-teal-"],
+[class*="text-emerald-"],
+[class*="text-slate-900"],
+[class*="text-slate-800"] {
+  color: #111111 !important;
+}
+
+[class*="text-slate-"],
+[class*="text-teal-"],
+[class*="text-emerald-"] {
+  color: #4a4a4a;
+}
+
+[class*="text-white"] {
+  color: #ffffff !important;
+}
+
+[class*="text-teal-100"],
+[class*="text-teal-200"],
+[class*="text-teal-300"] {
+  color: #f5f5f5 !important;
+}
+
+[class*="border-teal-"],
+[class*="border-emerald-"],
+[class*="border-slate-"] {
+  border-color: #d4d4d4 !important;
+}
+
+[class*="border-red-"],
+[class*="border-amber-"] {
+  border-color: #bdbdbd !important;
+}
+
+[class*="bg-red-"],
+[class*="bg-amber-"] {
+  background-color: #f5f5f5 !important;
+}
+
+[class*="text-red-"],
+[class*="text-amber-"] {
+  color: #333333 !important;
+}
+
+/* Smooth reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

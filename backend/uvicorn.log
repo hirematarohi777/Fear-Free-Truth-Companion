@@ -1,0 +1,20 @@
+{"timestamp": "2026-09-19T03:37:58.417546+00:00", "level": "INFO", "logger": "fear_free_companion", "message": "Initializing Fear-Free Family Truth Companion Backend..."}
+{"timestamp": "2026-09-19T03:37:58.418582+00:00", "level": "INFO", "logger": "fear_free_companion", "message": "Connecting to MongoDB at mongodb://localhost:27017"}
+{"timestamp": "2026-09-19T03:37:58.540310+00:00", "level": "INFO", "logger": "fear_free_companion", "message": "MongoDB connected and indexes verified."}
+{"timestamp": "2026-09-19T03:37:58.541692+00:00", "level": "INFO", "logger": "fear_free_companion", "message": "Background job worker started."}
+{"timestamp": "2026-09-19T03:37:58.542577+00:00", "level": "INFO", "logger": "fear_free_companion", "message": "Starting JobWorker [worker-1e0b4829]..."}
+{"timestamp": "2026-09-19T03:54:57.000034+00:00", "level": "INFO", "logger": "fear_free_companion", "message": "Worker [worker-1e0b4829] processing job 6aae078e169691cb8334f71a (document_analysis)..."}
+{"timestamp": "2026-09-19T03:55:07.656727+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://api.apinex.bond/v1/messages \"HTTP/1.1 200 OK\""}
+{"timestamp": "2026-09-19T03:55:07.674598+00:00", "level": "INFO", "logger": "fear_free_companion", "message": "Document analysis job 6aae078e169691cb8334f71a finished (completed)."}
+{"timestamp": "2026-09-19T03:56:18.375709+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://jasimk.app.n8n.cloud/webhook/family-report-share \"HTTP/1.1 400 Bad Request\""}
+{"timestamp": "2026-09-19T04:45:11.926098+00:00", "level": "INFO", "logger": "fear_free_companion", "message": "Worker [worker-1e0b4829] processing job 6aae1356169691cb8334f722 (document_analysis)..."}
+{"timestamp": "2026-09-19T04:45:53.718599+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://api.apinex.bond/v1/messages \"HTTP/1.1 200 OK\""}
+{"timestamp": "2026-09-19T04:45:55.055046+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://api.apinex.bond/v1/messages \"HTTP/1.1 200 OK\""}
+{"timestamp": "2026-09-19T04:45:55.098781+00:00", "level": "INFO", "logger": "fear_free_companion", "message": "Document analysis job 6aae1356169691cb8334f722 finished (completed)."}
+{"timestamp": "2026-09-19T04:47:09.499513+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://api.apinex.bond/v1/messages \"HTTP/1.1 200 OK\""}
+{"timestamp": "2026-09-19T04:48:25.807906+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://jasimk.app.n8n.cloud/webhook/family-report-share \"HTTP/1.1 400 Bad Request\""}
+{"timestamp": "2026-09-19T04:49:28.729449+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://jasimk.app.n8n.cloud/webhook/family-report-share \"HTTP/1.1 400 Bad Request\""}
+{"timestamp": "2026-09-19T05:55:16.252789+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://jasimk.app.n8n.cloud/webhook/family-report-share \"HTTP/1.1 400 Bad Request\""}
+{"timestamp": "2026-09-19T06:09:27.839543+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://jasimk.app.n8n.cloud/webhook/family-report-share \"HTTP/1.1 400 Bad Request\""}
+{"timestamp": "2026-09-19T06:11:22.480919+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://jasimk.app.n8n.cloud/webhook/family-report-share \"HTTP/1.1 400 Bad Request\""}
+{"timestamp": "2026-09-19T06:24:49.669628+00:00", "level": "INFO", "logger": "httpx", "message": "HTTP Request: POST https://jasimk.app.n8n.cloud/webhook/family-report-share \"HTTP/1.1 400 Bad Request\""}
