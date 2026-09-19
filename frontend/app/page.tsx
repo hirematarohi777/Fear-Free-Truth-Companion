@@ -96,11 +96,11 @@ export default function DashboardPage() {
             </h1>
 
             {/* 2. ADDED THE CONTAINER TEXT FLIP HERE AS A DYNAMIC HEADLINE */}
-            <ContainerTextFlip 
-              words={["Fear-Free", "Companion", "Finance", "Truth"]} 
-              className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
-              interval={2500}
-            />
+           <ContainerTextFlip
+  words={["Fear-Free", "Companion", "Finance", "Truth"]}
+  className="text-3xl sm:text-4xl md:text-5xl font-bold text-white"
+  duration={2500}
+/>
 
             <p className="text-sm text-teal-100/90 leading-relaxed max-w-xl">
               Analyze your home loan offer letter, uncover overlooked or conditional charges, verify online loan links, and selectively involve trusted family members before signing.
