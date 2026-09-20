@@ -1,11 +1,16 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import SmoothScroll from "@/components/providers/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "Fear-Free Family Truth Companion",
-  description: "Understand your loan. Involve your family. Decide with confidence.",
+  title: "Fear-Free Truth Companion | Clearer loan decisions",
+  description: "Understand complex financial documents, involve your family, and decide with confidence.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#f8fafc",
+  userScalable: false,
 };
 
 export default function RootLayout({
